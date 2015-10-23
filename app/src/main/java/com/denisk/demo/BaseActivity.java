@@ -15,6 +15,8 @@ public class BaseActivity extends Activity {
 
         ZooModel zoo = new ZooModel();
         zoo.setName("MyZoo");
+        zoo.setMonkeyCount(10);
+        zoo.setElephantCount(0);
 
         binding.setZoo(zoo);
 

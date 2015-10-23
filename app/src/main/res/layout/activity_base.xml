@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".BaseActivity"
     >
     <data>
         <variable
@@ -15,15 +17,20 @@
         android:orientation="vertical"
         >
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/zoo_name"
+            style="@style/Label"
+            android:text='@{"Zoo name is: " + zoo.name}'
+            tools:text="Some name"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
+            tools:text="some text"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
+            tools:text="another text"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{zoo.name}"
-            />
     </LinearLayout>
 </layout>
