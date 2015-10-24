@@ -20,43 +20,35 @@
         <TextView
             style="@style/Label"
             android:text='@{zoo.name}'
-            tools:text="Some name"
             />
         <TextView
             style="@style/Label"
             android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
-            tools:text="some text"
             />
         <TextView
             style="@style/Label"
             android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
-            tools:text="another text"
             />
         <TextView
             style="@style/Label"
             android:text='@{"Total animals in zoo: " + ZooUtil.getTotalAnimals(zoo)}'
-            tools:text="another text"
             />
         <TextView
             style="@style/Label"
             android:text='@{"Director of the zoo: " + (zoo.director.name ?? "No director")}'
-            tools:text="another text"
             />
         <TextView
             style="@style/Label"
             android:text='@{@string/zoo_properties + " - end of I18N text"}'
-            tools:text="Some name"
             />
         <TextView
             style="@style/Label"
             android:text='@{"Visitor 2 is: " + visitorList[2].name}'
-            tools:text="Some name"
             />
 
         <TextView
             style="@style/Label"
             android:text='@{"Animals in western cage: " + cageMap[ZooUtil.CAGE_WESTERN]}'
-            tools:text="Some name"
             />
 
         <Button
