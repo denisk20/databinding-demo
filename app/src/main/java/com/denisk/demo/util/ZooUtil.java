@@ -9,6 +9,8 @@ import com.denisk.demo.model.ZooModel;
  * @since 10/23/15.
  */
 public class ZooUtil {
+    public static final String CAGE_WESTERN = "western";
+
     public static int getTotalAnimals(ZooModel zoo) {
         return zoo.getMonkeyCount() + zoo.getElephantCount();
     }

@@ -6,8 +6,10 @@ import android.os.Bundle;
 import com.denisk.demo.databinding.ActivityBaseBinding;
 import com.denisk.demo.model.PersonModel;
 import com.denisk.demo.model.ZooModel;
+import com.denisk.demo.util.ZooUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BaseActivity extends Activity {
 
@@ -29,6 +31,10 @@ public class BaseActivity extends Activity {
         visitorList.add(new PersonModel("Nick"));
 
         binding.setVisitorList(visitorList);
+
+        HashMap<String, Integer> cageMap = new HashMap<>();
+        cageMap.put(ZooUtil.CAGE_WESTERN, 5);
+        binding.setCageMap(cageMap);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }

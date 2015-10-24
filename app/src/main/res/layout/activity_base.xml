@@ -7,6 +7,8 @@
     <data>
         <variable name="zoo" type="com.denisk.demo.model.ZooModel" />
         <variable name="visitorList" type="java.util.List&lt;com.denisk.demo.model.PersonModel>"/>
+        <variable name="cageMap" type="java.util.Map&lt;String, Integer>"/>
+
         <import type="com.denisk.demo.util.ZooUtil"/>
     </data>
 
@@ -48,6 +50,12 @@
         <TextView
             style="@style/Label"
             android:text='@{"Visitor 2 is: " + visitorList[2].name}'
+            tools:text="Some name"
+            />
+
+        <TextView
+            style="@style/Label"
+            android:text='@{"Animals in western cage: " + cageMap[ZooUtil.CAGE_WESTERN]}'
             tools:text="Some name"
             />
 
