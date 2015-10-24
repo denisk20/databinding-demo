@@ -39,7 +39,11 @@
             />
         <TextView
             style="@style/Label"
-            android:text='@{@string/zoo_properties + " - end of I18N text"}'
+            android:text='@{@string/zoo_status}'
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{@string/zoo_animal_kinds("monkeys", "elephants")}'
             />
         <TextView
             style="@style/Label"

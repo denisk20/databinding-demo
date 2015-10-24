@@ -4,7 +4,8 @@
     <string name="title_activity_base_binding">Base Bindings</string>
 
     <string name="zoo_name">Zoo name:</string>
-    <string name="zoo_properties">Zoo properties</string>
+    <string name="zoo_status">Zoo description from resource</string>
+    <string name="zoo_animal_kinds">There are %1$s and %2$s</string>
     <string name="monkeys">monkeys</string>
     <string name="checkMonkeys">Check monkeys</string>
 </resources>
