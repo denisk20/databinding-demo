@@ -6,6 +6,7 @@
     >
     <data>
         <variable name="zoo" type="com.denisk.demo.model.ZooModel" />
+        <variable name="visitorList" type="java.util.List&lt;com.denisk.demo.model.PersonModel>"/>
         <import type="com.denisk.demo.util.ZooUtil"/>
     </data>
 
@@ -36,12 +37,17 @@
             />
         <TextView
             style="@style/Label"
-            android:text='@{"Director of the zoo: " + zoo.director.name}'
+            android:text='@{"Director of the zoo: " + (zoo.director.name ?? "No director")}'
             tools:text="another text"
             />
         <TextView
             style="@style/Label"
             android:text='@{@string/zoo_properties + " - end of I18N text"}'
+            tools:text="Some name"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{"Visitor 2 is: " + visitorList[2].name}'
             tools:text="Some name"
             />
 
