@@ -11,4 +11,5 @@
     <string name="monkeys">monkeys</string>
     <string name="checkMonkeys">Check monkeys</string>
     <string name="button_sell_monkey">Sell 1 monkey</string>
+    <string name="button_buy_elephant">Buy an elephant</string>
 </resources>

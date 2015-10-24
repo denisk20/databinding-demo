@@ -31,6 +31,15 @@
             android:text="@string/button_sell_monkey"
             android:onClick="sellMonkey"
             />
+        <TextView
+            style="@style/Label"
+            android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephant(s)"}'
+            />
+        <Button
+            style="@style/Label"
+            android:text="@string/button_buy_elephant"
+            android:onClick="buyElephant"
+            />
 
     </LinearLayout>
 </layout>

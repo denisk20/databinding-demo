@@ -2,6 +2,7 @@ package com.denisk.demo.model;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.ObservableInt;
 import com.denisk.demo.BR;
 
 /**
@@ -11,7 +12,8 @@ import com.denisk.demo.BR;
 public class ObservableZooModel extends BaseObservable {
     private String name;
     private int monkeyCount;
-    private int elephantCount;
+
+    public final ObservableInt elephantCount = new ObservableInt();
 
     private ObservablePersonModel director;
 
@@ -35,14 +37,8 @@ public class ObservableZooModel extends BaseObservable {
         notifyPropertyChanged(BR.monkeyCount);
     }
 
-    @Bindable
-    public int getElephantCount() {
-        return elephantCount;
-    }
-
     public void setElephantCount(int elephantCount) {
-        this.elephantCount = elephantCount;
-        notifyPropertyChanged(BR.elephantCount);
+        this.elephantCount.set(elephantCount);
     }
 
     @Bindable
@@ -57,5 +53,9 @@ public class ObservableZooModel extends BaseObservable {
 
     public void sellMonkey() {
         setMonkeyCount(monkeyCount - 1);
+    }
+
+    public void addElephant() {
+        setElephantCount(elephantCount.get() + 1);
     }
 }

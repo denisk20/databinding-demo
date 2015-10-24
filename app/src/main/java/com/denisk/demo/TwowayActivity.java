@@ -47,4 +47,7 @@ public class TwowayActivity extends Activity {
         }.execute((Void[]) null);
     }
 
+    public void buyElephant(View view) {
+        zoo.addElephant();
+    }
 }
