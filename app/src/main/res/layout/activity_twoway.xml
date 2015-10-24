@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable name="zoo" type="com.denisk.demo.model.ObservableZooModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            style="@style/Label"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text='@{"Director is: " + zoo.director.name}'
+            />
+        <EditText
+            android:id="@+id/directorName"
+            style="@style/Label"
+            android:addTextChangedListener="@{zoo.director.onNameChangedListener}"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
+            />
+        <Button
+            style="@style/Label"
+            android:text="@string/button_sell_monkey"
+            android:onClick="sellMonkey"
+            />
+
+    </LinearLayout>
+</layout>

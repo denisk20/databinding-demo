@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Databindings Demo</string>
-    <string name="button_base_binding">Base binding</string>
-    <string name="title_activity_base_binding">Base Bindings</string>
+
+    <string name="button_oneway_binding">One-way binding</string>
+    <string name="button_twoway_binding">Two-way Binding</string>
+
 
     <string name="zoo_name">Zoo name:</string>
     <string name="zoo_status">Zoo description from resource</string>
     <string name="zoo_animal_kinds">There are %1$s and %2$s</string>
     <string name="monkeys">monkeys</string>
     <string name="checkMonkeys">Check monkeys</string>
+    <string name="button_sell_monkey">Sell 1 monkey</string>
 </resources>

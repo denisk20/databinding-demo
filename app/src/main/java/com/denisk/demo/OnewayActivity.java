@@ -3,7 +3,7 @@ package com.denisk.demo;
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import com.denisk.demo.databinding.ActivityBaseBinding;
+import com.denisk.demo.databinding.ActivityOnewayBinding;
 import com.denisk.demo.model.PersonModel;
 import com.denisk.demo.model.ZooModel;
 import com.denisk.demo.util.ZooUtil;
@@ -11,12 +11,12 @@ import com.denisk.demo.util.ZooUtil;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class BaseActivity extends Activity {
+public class OnewayActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityBaseBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_base);
+        ActivityOnewayBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_oneway);
 
         ZooModel zoo = new ZooModel();
         zoo.setName("MyZoo");

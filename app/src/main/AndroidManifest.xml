@@ -16,8 +16,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BaseActivity"
-            android:label="@string/title_activity_base_binding"
+            android:name=".OnewayActivity"
+            android:label="@string/button_oneway_binding"
+            android:parentActivityName="com.denisk.demo.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.denisk.demo.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TwowayActivity"
+            android:label="@string/button_twoway_binding"
             android:parentActivityName="com.denisk.demo.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data

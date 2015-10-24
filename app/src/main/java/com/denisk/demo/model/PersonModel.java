@@ -7,7 +7,6 @@ package com.denisk.demo.model;
 public class PersonModel {
     private String name;
 
-
     public PersonModel(String name) {
         this.name = name;
     }

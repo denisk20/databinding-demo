@@ -13,8 +13,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onBaseBindingClicked(View v) {
-        Intent intent = new Intent(this, BaseActivity.class);
+    public void onOnewayActivityClicked(View v) {
+        start(OnewayActivity.class);
+    }
+
+    public void onTwowayActivityClicked(View v) {
+        start(TwowayActivity.class);
+    }
+
+    private void start(Class<? extends Activity> clazz) {
+        Intent intent = new Intent(this, clazz);
         startActivity(intent);
     }
 }

@@ -10,13 +10,14 @@
         android:orientation="vertical">
         <Button
             style="@style/NavButton"
-            android:text="@string/button_base_binding"
-            android:onClick="onBaseBindingClicked"
+            android:text="@string/button_oneway_binding"
+            android:onClick="onOnewayActivityClicked"
             />
 
         <Button
             style="@style/NavButton"
-            android:text="@string/button_base_binding"
+            android:text="@string/button_twoway_binding"
+            android:onClick="onTwowayActivityClicked"
             />
     </LinearLayout>
 </ScrollView>
