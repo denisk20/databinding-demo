@@ -4,6 +4,7 @@
     <string name="title_activity_base_binding">Base Bindings</string>
 
     <string name="zoo_name">Zoo name:</string>
-    <string name="this_zoo">This zoo has</string>
+    <string name="zoo_properties">Zoo properties</string>
     <string name="monkeys">monkeys</string>
+    <string name="checkMonkeys">Check monkeys</string>
 </resources>

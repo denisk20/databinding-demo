@@ -5,10 +5,8 @@
     tools:context=".BaseActivity"
     >
     <data>
-        <variable
-            name="zoo"
-            type="com.denisk.demo.model.ZooModel"
-            />
+        <variable name="zoo" type="com.denisk.demo.model.ZooModel" />
+        <import type="com.denisk.demo.util.ZooUtil"/>
     </data>
 
     <LinearLayout
@@ -18,7 +16,7 @@
         >
         <TextView
             style="@style/Label"
-            android:text='@{"Zoo name is: " + zoo.name}'
+            android:text='@{zoo.name}'
             tools:text="Some name"
             />
         <TextView
@@ -31,6 +29,25 @@
             android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
             tools:text="another text"
             />
+        <TextView
+            style="@style/Label"
+            android:text='@{"Total animals in zoo: " + ZooUtil.getTotalAnimals(zoo)}'
+            tools:text="another text"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{"Director of the zoo: " + zoo.director.name}'
+            tools:text="another text"
+            />
+        <TextView
+            style="@style/Label"
+            android:text='@{@string/zoo_properties + " - end of I18N text"}'
+            tools:text="Some name"
+            />
 
+        <Button
+            style="@style/Label"
+            android:text="@string/checkMonkeys"
+            android:onClick="@{zoo.monkeyCount > 0 ? ZooUtil.onMonkeys : ZooUtil.onNoMonkeys}"/>
     </LinearLayout>
 </layout>

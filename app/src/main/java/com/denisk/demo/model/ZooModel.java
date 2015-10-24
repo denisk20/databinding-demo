@@ -9,6 +9,8 @@ public class ZooModel {
     private int monkeyCount;
     private int elephantCount;
 
+    private PersonModel director;
+
     public String getName() {
         return name;
     }
@@ -31,5 +33,13 @@ public class ZooModel {
 
     public void setElephantCount(int elephantCount) {
         this.elephantCount = elephantCount;
+    }
+
+    public PersonModel getDirector() {
+        return director;
+    }
+
+    public void setDirector(PersonModel director) {
+        this.director = director;
     }
 }
