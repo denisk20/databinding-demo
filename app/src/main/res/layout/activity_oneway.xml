@@ -12,52 +12,67 @@
         <import type="com.denisk.demo.util.ZooUtil"/>
     </data>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            style="@style/Label"
-            android:text='@{zoo.name}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{"Total animals in zoo: " + ZooUtil.getTotalAnimals(zoo)}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{"Director of the zoo: " + (zoo.director.name ?? "No director")}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{@string/zoo_status}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{@string/zoo_animal_kinds("monkeys", "elephants")}'
-            />
-        <TextView
-            style="@style/Label"
-            android:text='@{"Visitor 2 is: " + visitorList[2].name}'
-            />
+        android:layout_height="match_parent">
 
-        <TextView
-            style="@style/Label"
-            android:text='@{"Animals in western cage: " + cageMap[ZooUtil.CAGE_WESTERN]}'
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
-        <Button
-            style="@style/Label"
-            android:text="@string/checkMonkeys"
-            android:onClick="@{zoo.monkeyCount > 0 ? ZooUtil.onMonkeys : ZooUtil.onNoMonkeys}"/>
-    </LinearLayout>
+            <TextView
+                style="@style/Label"
+                android:text='@{zoo.name}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{"Total animals in zoo: " + ZooUtil.getTotalAnimals(zoo)}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{"Director of the zoo: " + (zoo.director.name ?? "No director")}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{@string/zoo_status}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{@string/zoo_animal_kinds("monkeys", "elephants")}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{"Visitor 2 is: " + visitorList[2].name}'
+                />
+
+            <TextView
+                style="@style/Label"
+                android:text='@{"Animals in western cage: " + cageMap[ZooUtil.CAGE_WESTERN]}'
+                />
+
+            <Button
+                style="@style/Label"
+                android:text="@string/checkMonkeys"
+                android:onClick="@{zoo.monkeyCount > 0 ? ZooUtil.onMonkeys : ZooUtil.onNoMonkeys}"
+                />
+        </LinearLayout>
+    </ScrollView>
+
 </layout>
