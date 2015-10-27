@@ -31,7 +31,7 @@
 
             <TextView
                 style="@style/Label"
-                android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
+                android:text='@{(zoo.monkeyCount > 0 ? zoo.monkeyCount+"" : "no") + " monkeys"}'
                 />
 
             <Button
@@ -42,7 +42,7 @@
 
             <TextView
                 style="@style/Label"
-                android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephant(s)"}'
+                android:text='@{(zoo.elephantCount > 0 ? zoo.elephantCount+"" : "no") + " elephant(s)"}'
                 />
 
             <Button
