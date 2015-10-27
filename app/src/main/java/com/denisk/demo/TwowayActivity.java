@@ -1,7 +1,6 @@
 package com.denisk.demo;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,11 +27,6 @@ public class TwowayActivity extends Activity {
 
         binding.setZoo(zoo);
         binding.directorName.setText(zoo.getDirector().getName());
-    }
-
-    public void onBaseBindingClicked(View v) {
-        Intent intent = new Intent(this, OnewayActivity.class);
-        startActivity(intent);
     }
 
     public void sellMonkey(View view) {
