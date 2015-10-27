@@ -29,12 +29,12 @@
 
             <TextView
                 style="@style/Label"
-                android:text='@{(zoo.monkeyCount > 0 ? Integer.toString(zoo.monkeyCount) : "no") + " monkeys"}'
+                android:text='@{(zoo.monkeyCount > 0 ? zoo.monkeyCount+"" : "no") + " monkeys"}'
                 />
 
             <TextView
                 style="@style/Label"
-                android:text='@{(zoo.elephantCount > 0 ? Integer.toString(zoo.elephantCount) : "no") + " elephants"}'
+                android:text='@{(zoo.elephantCount > 0 ? zoo.elephantCount+"" : "no") + " elephants"}'
                 />
 
             <TextView
